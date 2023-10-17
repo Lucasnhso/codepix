@@ -12,7 +12,7 @@ const (
 	TransactionPending string = "pending"
 	TransactionCompleted string = "completed"
 	TransactionError string = "error"
-	TransctionConfirmed string = "confirmed"
+	TransactionConfirmed string = "confirmed"
 )
 
 type TransactionRepositoryInterface interface {
@@ -86,7 +86,7 @@ func (t *Transaction) Complete() error {
 	return err
 }
 func (t *Transaction) Confirm() error {
-	t.Status = TransctionConfirmed
+	t.Status = TransactionConfirmed
   t.UpdatedAt = time.Now()
 	err := t.isValid()
 	return err
