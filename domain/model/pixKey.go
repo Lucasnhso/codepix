@@ -46,6 +46,7 @@ func NewPixKey(kind string, account *Account, key string) (*PixKey, error) {
 		Kind: kind,
     Key: key,
     Account: account,
+		AccountId: account.ID,
     Status: "active",
 	}
 
